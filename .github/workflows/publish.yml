@@ -1,6 +1,6 @@
 name: publish
 
-# Publica o pacote `ganchoweb` no npm ao criar uma tag de versão (ex.: v0.1.0).
+# Publica o pacote `@ganchoweb/cli` no npm ao criar uma tag de versão (ex.: v0.1.0).
 # Autenticação via OIDC Trusted Publisher (sem NPM_TOKEN):
 # requer `id-token: write` e npm >= 11.5.1. Configure o Trusted Publisher em
 # npmjs.com apontando para este repo + este arquivo (publish.yml).
