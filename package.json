@@ -27,7 +27,10 @@
     "check:fix": "biome check --write ."
   },
   "dependencies": {
-    "commander": "^15.0.0"
+    "@clack/prompts": "^1.6.0",
+    "@ganchoweb/core": "^0.1.0",
+    "commander": "^15.0.0",
+    "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.0",

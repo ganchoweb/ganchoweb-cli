@@ -1,8 +1,11 @@
 import { Command } from "commander";
+import { registerLogin } from "./commands/login.ts";
+import { registerLogout } from "./commands/logout.ts";
+import { registerTunnel } from "./commands/tunnel.ts";
+import { registerWhoami } from "./commands/whoami.ts";
 
 // Monta o programa da CLI. Mantido separado do entrypoint (bin.ts) para ser
-// testável sem disparar process.exit. Os comandos (login, tunnel, whoami,
-// logout) são adicionados a partir do M6.
+// testável sem disparar process.exit.
 export const buildProgram = (): Command => {
   const program = new Command();
 
@@ -10,6 +13,11 @@ export const buildProgram = (): Command => {
     .name("ganchoweb")
     .description("CLI do GanchoWeb: túnel autenticado de webhooks para o app local.")
     .version("0.0.1");
+
+  registerLogin(program);
+  registerLogout(program);
+  registerWhoami(program);
+  registerTunnel(program);
 
   return program;
 };
