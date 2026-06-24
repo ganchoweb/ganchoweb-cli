@@ -1,6 +1,6 @@
 {
   "name": "@ganchoweb/cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI do GanchoWeb: túnel autenticado em tempo real de webhooks para o app local.",
   "license": "MIT",
   "repository": {
