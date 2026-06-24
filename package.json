@@ -3,6 +3,10 @@
   "version": "0.0.2",
   "description": "CLI do GanchoWeb: túnel autenticado em tempo real de webhooks para o app local.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganchoweb/ganchoweb-cli.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=22"
