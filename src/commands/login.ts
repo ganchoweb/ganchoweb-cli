@@ -37,7 +37,11 @@ export const registerLogin = (program: Command): void => {
       try {
         const response = await fetch(`${serverUrl}/api/auth/sign-in/email`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          // O fetch do Node injeta `sec-fetch-mode: cors`, fazendo o better-auth
+          // exigir um Origin confiável (proteção CSRF). Sem Origin → 403
+          // MISSING_OR_NULL_ORIGIN. O servidor confia na própria baseURL por
+          // padrão, então enviamos o serverUrl como Origin.
+          headers: { "Content-Type": "application/json", Origin: serverUrl },
           body: JSON.stringify({ email, password }),
         });
 
